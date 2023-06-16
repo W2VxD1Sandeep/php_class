@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		.box {
+			width: 200px;
+			height: 200px;
+			background-color: red;
+			position: relative;
+			overflow: hidden;
+			border-radius: 10px;
+			transition: transform 1s ease-out;
+		}
+
+		.box img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: transform 1s ease-out;
+		}
+		.box:hover  {
+			transform: scale(1.2);
+			transform: rotate(20deg);
+		}
+
+		.box p {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			padding: 10px;
+			margin: 0;
+			color: white;
+			font-size: 18px;
+			font-weight: bold;
+			background-color: rgba(0, 0, 0, 0.5);
+			width: 100%;
+			transition: opacity 0.5s ease-in-out;
+			opacity: 0;
+		}
+
+		.box:hover p {
+			opacity: 1;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<img src="https://picsum.photos/800/800" alt="Image">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+	</div>
+</body>
+</html>
